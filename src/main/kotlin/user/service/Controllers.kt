@@ -7,5 +7,9 @@ import io.micronaut.http.annotation.Get
 class UserController {
 
     @Get("/")
-    fun get() = (User("Marcus Sousa", "solivavinicius@gmail.com"))
+    fun get(): List<User> {
+        return listOf(User("Marcus Sousa", "solivavinicius@gmail.com"),
+                User("Marcus Soliva", "solivavinicius@gmail.com"),
+                User("Vinicius", "solivavinicius@gmail.com"))
+    }
 }
